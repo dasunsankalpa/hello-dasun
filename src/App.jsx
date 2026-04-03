@@ -1,15 +1,17 @@
 
-import { useEffect } from 'react';
+
+import whatsappBg from './assets/whatsapp-bg.jpeg';
 
 function App() {
-  useEffect(() => {
-    document.body.classList.add('bg-whatsapp');
-    return () => {
-      document.body.classList.remove('bg-whatsapp');
-    };
-  }, []);
+  const bgStyle = {
+    minHeight: '100vh',
+    backgroundImage: `url(${whatsappBg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
   return (
-    <div>
+    <div style={bgStyle}>
       <h1>Hello Dasun</h1>
     </div>
   );
